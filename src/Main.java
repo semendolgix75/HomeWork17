@@ -10,21 +10,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String login = "1234567801и23456789";
+        String login = "12345678902345678901";
         System.out.println("Введен логин: " + login);
-        try {
-            checkLogin(login);
-        } catch (WrongLoginException e) {
-            System.out.println(e.getMessage());
-        }
+
         String password = "123456*";
         System.out.println("Введен пароль: " + password);
         String confirmPassword = "123456*";
-        System.out.print("Повтор пароля: " + confirmPassword);
+        System.out.println("Повтор пароля: " + confirmPassword);
         try {
-            checkPasswords(password, confirmPassword);
-        } catch (WrongPasswordException e) {
+            CheckLoginPassword.check(login,password,confirmPassword);
+        } catch (WrongLoginException e) {
             System.out.println(e.getMessage());
+
         }
 
     }
