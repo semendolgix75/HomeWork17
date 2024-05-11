@@ -2,7 +2,7 @@ import exception.WrongLoginException;
 import exception.WrongPasswordException;
 
 public class CheckLoginPassword {
-    public static void check(String login, String password, String confirmPassword) throws WrongLoginException, WrongPasswordException {
+    public static void check(String login, String password, String confirmPassword)  {
         if (login.length() > 20) {
             throw new WrongLoginException("ОШИБКА.У логина есть ограничение по длине – он должен быть равен или меньше 20 символов");
         }
